@@ -1,0 +1,21 @@
+part2.txt:
+
+crash1.gft: 
+
+        This test case triggers a segmentation fault error. 
+        It is caused by a buffer overflow in the message field of the message record type. 
+        The message is 32 bytes long, but the buffer that holds it is only 31 bytes long. 
+        By filling the message field with 32 bytes, the program overflows the buffer and crashes.
+crash2.gft:
+
+        This test case also triggers a segmentation fault error, but the root cause is different from crash1.gft. 
+        This time, the error is caused by a null pointer dereference.
+        In the interpreter function, there is a check for valid record types.
+        If the record type is not recognized, the program prints an error message and exits. 
+        However, in crash2.gft, the record type is set to zero, which is not recognized as a valid record type. 
+        As a result, the program tries to dereference a null pointer and crashes.
+hang.gft: 
+
+        This test case triggers an infinite loop. 
+        It is caused by the animation record type. 
+        The program field of the record is filled with 256 bytes of end program instructions, which causes the interpreter function to loop indefinitely.

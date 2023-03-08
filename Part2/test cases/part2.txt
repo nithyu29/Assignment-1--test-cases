@@ -1,0 +1,19 @@
+Test Case 1: crash1.gft
+This test case will cause the program to crash due to a buffer overflow.
+We will create a gift card file with a merchant ID that is longer than 32 bytes.
+The program will read in 32 bytes for the merchant ID and will write them to the output file.
+However, our merchant ID is longer than 32 bytes and will overflow the buffer, causing a segmentation fault.
+
+
+
+Test Case 2: crash2.gft
+This test case will cause the program to crash due to a null pointer dereference.
+ We will create a gift card file with a record of type "animation" but without any program instructions.
+The program will try to execute the program, but it will fail to find any instructions and will attempt to dereference a null pointer, resulting in a segmentation fault.
+
+
+
+Test Case 3: hang.gft
+This test case will cause the program to loop infinitely due to a bug in the animation record type.
+We will create a gift card file with a record of type "animation" that has a program with an instruction that jumps to itself.
+The program will keep jumping to itself and will never terminate, causing an infinite loop.
