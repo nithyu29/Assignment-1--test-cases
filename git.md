@@ -302,3 +302,178 @@ remote: Compressing objects: 100% (54/54), done.
 remote: Total 81 (delta 21), reused 81 (delta 21), pack-reused 0
 Receiving objects: 100% (81/81), 105.55 KiB | 79.00 KiB/s, done.
 Resolving deltas: 100% (21/21), done.
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git add .
+warning: adding embedded git repository: ass/Assignment-1--test-cases
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:   git submodule add <url> ass/Assignment-1--test-cases
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:   git rm --cached ass/Assignment-1--test-cases
+hint: 
+hint: See "git help submodule" for more information.
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git add .
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git commit -S -m "second commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got '_SaiNt@archie-SaiNt.(none)')
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git config user.email "nithyuraj2929@gmail.com"
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git config user.name "nithu29"
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git commit -S -m "second commit"
+[main 3604bf9] second commit
+ 1 file changed, 1 insertion(+)
+ create mode 160000 ass/Assignment-1--test-cases
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git push
+remote: Permission to nithyu29/Assignment-1--test-cases.git denied to PeterMwendia.
+fatal: unable to access 'https://github.com/nithyu29/Assignment-1--test-cases.git/': The requested URL returned error: 403
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git remote set-url origin git@github.com:nithyu29/Assignment-1--test-cases.git
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 838 bytes | 209.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:nithyu29/Assignment-1--test-cases.git
+   4761986..3604bf9  main -> main
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases/ass (main)
+$ cd /e/WORKSPACE/Assignment-1--test-cases
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ git add .
+warning: in the working copy of '.vscode/c_cpp_properties.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ssh.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ssh.txt.pub', LF will be replaced by CRLF the next time Git touches it
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ git commit -S -m "second commit"
+[main b297f07] second commit
+ 9 files changed, 426 insertions(+), 28 deletions(-)
+ create mode 100644 .github/workflows/hello.yml
+ create mode 100644 .vscode/c_cpp_properties.json
+ delete mode 100644 .vscode/tasks.json
+ create mode 100644 giftcardreader.exe
+ create mode 100644 git.md
+ create mode 100644 issues
+ create mode 100644 ssh.txt
+ create mode 100644 ssh.txt.pub
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ git push
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (13/13), 86.74 KiB | 227.00 KiB/s, done.
+Total 13 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:nithyu29/Assignment-1--test-cases.git
+   3604bf9..b297f07  main -> main
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$
+ *  History restored 
+
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ git add .
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ git push
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ eval $(ssh-agent -s)
+Agent pid 861
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ ssh-add /e/WORKSPACE/ssh.txt
+/e/WORKSPACE/ssh.txt: No such file or directory
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ ssh-add /e/WORKSPACE/ssh.txt.pub
+/e/WORKSPACE/ssh.txt.pub: No such file or directory
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ ssh-add /e/WORKSPACE/ass-2/ssh.txt
+Enter passphrase for /e/WORKSPACE/ass-2/ssh.txt: 
+Identity added: /e/WORKSPACE/ass-2/ssh.txt (nithyuraj2929@gmail.com)
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ ssh -T git@github.com
+Hi nithyu29! You've successfully authenticated, but GitHub does not provide shell access.
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ git add .
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ git push
+Everything up-to-date
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ git commit -S -m "second commit"
+[main 04e1370] second commit
+ 3 files changed, 10 deletions(-)
+ delete mode 160000 ass/Assignment-1--test-cases
+ delete mode 100644 ssh.txt
+ delete mode 100644 ssh.txt.pub
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 759 bytes | 253.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:nithyu29/Assignment-1--test-cases.git
+   b297f07..04e1370  main -> main
+
+_SaiNt@archie-SaiNt MINGW64 /e/WORKSPACE/Assignment-1--test-cases (main)

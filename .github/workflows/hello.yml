@@ -10,3 +10,19 @@ jobs:
     steps:
     - name: Echo Hello World
       run: echo "Hello world"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: sudo apt-get install -y lcov
+
+    - name: Build and Test
+      run: |
+        make
+        make test
