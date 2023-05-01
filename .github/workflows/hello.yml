@@ -21,6 +21,9 @@ jobs:
     - name: Install dependencies
       run: sudo apt-get install -y lcov
 
+    - name: Make runtests.sh executable
+      run: chmod +x runtests.sh
+
     - name: Build and Test
       run: |
         make
