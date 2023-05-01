@@ -1,4 +1,4 @@
-name: Hello World
+name: Hello World and Run Tests
 
 on:
   push:
@@ -11,7 +11,6 @@ jobs:
     - name: Echo Hello World
       run: echo "Hello world"
 
-jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
