@@ -1,0 +1,11 @@
+Here is a summary of the bugs I hypothesized, and the fixes I implemented for each:
+
+Crash due to incorrect record type handling:
+Hypothesis: The giftcardreader.c program may not handle unexpected record types properly, potentially causing a crash when processing a test case with an unsupported or invalid record type.
+
+Fix: I addressed this issue by adding validation for the record type before processing it in the giftcardreader.c program. I ensured that the record type fell within the expected range and handled unexpected values gracefully, either by skipping the record, returning an error, or taking other appropriate actions.
+
+Hang due to infinite loop or excessive processing time:
+Hypothesis: The giftcardreader.c program may contain a loop or recursive function that takes an excessive amount of time to process certain inputs, causing the program to hang when processing a test case.
+
+Fix: I resolved this issue by implementing appropriate safeguards in the giftcardreader.c program to avoid infinite loops or excessive processing times. I set limits on the number of iterations, checked for conditions that could lead to infinite loops, and implemented a timeout mechanism to halt the execution if it exceeded a certain threshold.

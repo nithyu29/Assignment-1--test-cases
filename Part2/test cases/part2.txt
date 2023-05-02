@@ -1,19 +1,10 @@
-Test Case 1: crash1.gft
-This test case will cause the program to crash due to a buffer overflow.
-We will create a gift card file with a merchant ID that is longer than 32 bytes.
-The program will read in 32 bytes for the merchant ID and will write them to the output file.
-However, our merchant ID is longer than 32 bytes and will overflow the buffer, causing a segmentation fault.
+cases.
 
+crash1.gft:
+This test case exposes a bug related to the string handling in the message record. The program has a lack of proper bounds checking when reading the message record, leading to a buffer overflow. In this test case, the message field is filled with 32 bytes of data without a null terminator, causing the strlen function to read past the intended buffer when calculating the string length, potentially leading to a crash.
 
+crash2.gft:
+The crash in this test case is caused by an integer overflow when calculating the total value of the gift card. When the amount_added field has a sufficiently large value, the result of ret_count += gcac_ptr->amount_added overflows, causing undefined behavior and potentially leading to a crash.
 
-Test Case 2: crash2.gft
-This test case will cause the program to crash due to a null pointer dereference.
- We will create a gift card file with a record of type "animation" but without any program instructions.
-The program will try to execute the program, but it will fail to find any instructions and will attempt to dereference a null pointer, resulting in a segmentation fault.
-
-
-
-Test Case 3: hang.gft
-This test case will cause the program to loop infinitely due to a bug in the animation record type.
-We will create a gift card file with a record of type "animation" that has a program with an instruction that jumps to itself.
-The program will keep jumping to itself and will never terminate, causing an infinite loop.
+hang.gft:
+This test case exploits a bug in the animate function by creating a looping animation. The program includes an unconditional jump (opcode 0x09) that causes the program counter to jump back to the same instruction, creating an infinite loop. The hang occurs when the animate function keeps executing this loop without any exit condition, causing the program to hang indefinitely.
